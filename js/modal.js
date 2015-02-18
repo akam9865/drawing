@@ -5,8 +5,9 @@ $(function () {
 		var $overlay = $('<div class="overlay">');
 		var $modal   = $('<div class="modal">');
 
-		var img  = $(event.currentTarget).data("img");
-		var $img = $('<img src="images/' + img + '">');
+		var img   = $(event.currentTarget).data("img");
+		var width = $(event.currentTarget).data("width");
+		var $img  = $('<img src="images/' + img + '">');
 		var video = $(event.currentTarget).data("video");
 
 
@@ -20,6 +21,7 @@ $(function () {
 		}
 		
 		$('body').append($overlay, $modal);
+		$modal.css('width', width);
 		$overlay.on('click', function (event) {
 			$modal.remove();
 			this.remove();
@@ -32,7 +34,7 @@ $(function () {
 			var $video = $('<video autoplay controls loop src="videos/' + video + '">' );
 			$modal.empty();
 			$modal.append($video);
-			$modal.css('width', 900);
+			$modal.css('width', 1000);
 		})
 		
 		
