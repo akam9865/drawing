@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .left {
 	width: 40%;
 	background: white;
@@ -27,9 +26,10 @@ body {
 
 #name {
 	width: 40%;
-	font-size: 20pt;
+	font-size: 30pt;
 	text-align: center;
 	position: fixed;
+	font-family: 'Bitter', serif;
 
 	top: 50%;
 	transform: translateY(-50%);
