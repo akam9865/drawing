@@ -31,16 +31,11 @@ $(function () {
 		$('a').on('click', function (event) {
 			event.preventDefault();
 			var video  = $(event.currentTarget).data('video');
-			var $video = $('<video autoplay controls loop src="videos/' + video + '">' );
+			var $video = $('<video autoplay controls src="videos/' + video + '">' );
 			$modal.empty();
 			$modal.append($video);
 			$modal.css('width', 1000);
 		})
-		
-		
-		
+			
 	});
-	
-	
-	
 });

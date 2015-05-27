@@ -22,12 +22,11 @@
 		</div> -->
 
 		<div class="header">
-			
 		</div>
 		
 		<div class="container">
 			<div class="left">
-				<div class="name">Kyle Smith</div>
+				<div id="name"></div>
 			</div>
 			
 			
@@ -90,13 +89,132 @@
 						<img src="images/thumbs/santa_barbara_square.png">
 					</div>
 
+					<div class="thumbnail"
+						data-id="1"
+						data-img="bridge_pen.jpg"
+						data-video="bridge_draw.mp4"
+						data-width="900">
+						
+						<img src="images/thumbs/bridge_pen_square.png">
+					</div>
+
+					<div class="thumbnail"
+						data-img="tree.jpg"
+						data-video="tree_draw.mp4"
+						data-width="620">
+						
+						<img src="images/thumbs/tree_square.png">
+					</div>					
+					
+					<div class="thumbnail"
+						data-img="santa_barbara.jpg"
+						data-video="sb_draw.mp4"
+						data-width="750">
+						
+						<img src="images/thumbs/santa_barbara_square.png">
+					</div>
+					
+					<div class="thumbnail"
+						data-id="1"
+						data-img="bridge_pen.jpg"
+						data-video="bridge_draw.mp4"
+						data-width="900">
+						
+						<img src="images/thumbs/bridge_pen_square.png">
+					</div>
+
+					<div class="thumbnail"
+						data-img="tree.jpg"
+						data-video="tree_draw.mp4"
+						data-width="620">
+						
+						<img src="images/thumbs/tree_square.png">
+					</div>					
+					
+					<div class="thumbnail"
+						data-img="santa_barbara.jpg"
+						data-video="sb_draw.mp4"
+						data-width="750">
+						
+						<img src="images/thumbs/santa_barbara_square.png">
+					</div>
+					<div class="thumbnail"
+						data-id="1"
+						data-img="bridge_pen.jpg"
+						data-video="bridge_draw.mp4"
+						data-width="900">
+						
+						<img src="images/thumbs/bridge_pen_square.png">
+					</div>
+
+					<div class="thumbnail"
+						data-img="tree.jpg"
+						data-video="tree_draw.mp4"
+						data-width="620">
+						
+						<img src="images/thumbs/tree_square.png">
+					</div>					
+					
+					<div class="thumbnail"
+						data-img="santa_barbara.jpg"
+						data-video="sb_draw.mp4"
+						data-width="750">
+						
+						<img src="images/thumbs/santa_barbara_square.png">
+					</div>
+					<div class="thumbnail"
+						data-id="1"
+						data-img="bridge_pen.jpg"
+						data-video="bridge_draw.mp4"
+						data-width="900">
+						
+						<img src="images/thumbs/bridge_pen_square.png">
+					</div>
+
+					<div class="thumbnail"
+						data-img="tree.jpg"
+						data-video="tree_draw.mp4"
+						data-width="620">
+						
+						<img src="images/thumbs/tree_square.png">
+					</div>					
+					
+					<div class="thumbnail"
+						data-img="santa_barbara.jpg"
+						data-video="sb_draw.mp4"
+						data-width="750">
+						
+						<img src="images/thumbs/santa_barbara_square.png">
+					</div>
+					
 				</div>
 				
 			</div>
 
 		</div>
 		
+		<script>
+			
+			var nameElement = document.getElementById("name");
+			var letters = "Kyle Smith".split("");
+			var loop;
+			
+			function type() {					
 
+				if (letters.length) {
+					nameElement.innerHTML += letters.shift();
+				} else {
+					clearTimeout(loop);
+					return false;
+				}
+				var time = Math.random() * 75 + 250;
+				
+				loop = setTimeout(type, time)
+			};
+			
+			type()
+		</script>
+		
+		<script src="js/modal.js"></script>
 	</body>
-	<script src="js/modal.js"></script>
 </html>
