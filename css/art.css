@@ -21,7 +21,7 @@ body {
 	background: rgba(0, 0, 0, .08);
 	float: right;
 	padding: 10px;
-	max-height: 100%;
+	min-height: 100%;
 }
 
 #name {
@@ -100,7 +100,7 @@ video {
 
 a {
 	text-decoration: none;
-	font-family: helvetica;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .controls {
