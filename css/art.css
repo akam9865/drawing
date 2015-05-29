@@ -100,6 +100,7 @@ video {
 
 a {
 	text-decoration: none;
+	color: rgba(0, 0, 0, 0.9);
 	font-family: 'Open Sans', sans-serif;
 }
 

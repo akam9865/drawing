@@ -101,22 +101,25 @@
 			
 			var nameElement = document.getElementById("name");
 			var letters = "Kyle Smith".split("");
-			var loop;
 			
-			function type() {					
+			var start = null;
+			var i = 1;
+
+			function step (timestamp) {
+				if (!start) start = timestamp;
+				var progress = timestamp - start;
+				
+				if (progress > i * (Math.random() * 50 + 250) ) {
+					nameElement.innerHTML += letters.shift();
+					i++;
+				}
 
 				if (letters.length) {
-					nameElement.innerHTML += letters.shift();
-				} else {
-					clearTimeout(loop);
-					return false;
+					window.requestAnimationFrame(step);
 				}
-				var time = Math.random() * 75 + 250;
-				
-				loop = setTimeout(type, time)
 			};
 			
-			type()
+			window.requestAnimationFrame(step);
 		</script>
 		
 		<script src="js/modal.js"></script>
