@@ -98,28 +98,32 @@
 		</div>
 		
 		<script>
-			
-			var nameElement = document.getElementById("name");
-			var letters = "Kyle Smith".split("");
-			
-			var start = null;
-			var i = 1;
-
-			function step (timestamp) {
-				if (!start) start = timestamp;
-				var progress = timestamp - start;
+			$(function () {
 				
-				if (progress > i * (Math.random() * 50 + 250) ) {
-					nameElement.innerHTML += letters.shift();
-					i++;
-				}
-
-				if (letters.length) {
-					window.requestAnimationFrame(step);
-				}
-			};
+				var nameElement = document.getElementById("name");
+				var letters = "Kyle Smith".split("");
 			
-			window.requestAnimationFrame(step);
+				var start = null;
+				var i = 1;
+
+				function step (timestamp) {
+					if (!start) start = timestamp;
+					var progress = timestamp - start;
+				
+					if (progress > i * (Math.random() * 50 + 250) ) {
+						nameElement.innerHTML += letters.shift();
+						i++;
+					}
+
+					if (letters.length) {
+						window.requestAnimationFrame(step);
+					}
+				};
+			
+				window.requestAnimationFrame(step);
+				
+			})
+
 		</script>
 		
 		<script src="js/modal.js"></script>
